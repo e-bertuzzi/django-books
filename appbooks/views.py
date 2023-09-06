@@ -10,3 +10,6 @@ from appbooks.models import Reading
 def readings_list(request):
     readings = Reading.objects.all()
     return render(request, 'readings_list.html', {'readings': readings})
+
+def book(request, titolo):
+    return render(request, 'book.html', {'titolo': titolo})

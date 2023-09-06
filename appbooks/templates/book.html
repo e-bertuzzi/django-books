@@ -7,25 +7,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Libri di Emanuele</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <table>
-            <tr>
-                <th>Titolo</th>
-                <th>Data inizio</th>
-                <th>Data fine</th>
-                
-                {% for reading in readings %}
-                    <tr>
-                        <th><a href="{% url 'book' titolo=reading.book %}">{{reading.book}}</a></th>
-                        <th>{{reading.data_inizio}}</th>
-                        <th>{{reading.data_fine}}</th>
-                    </tr>
-                {% endfor %}
-        </table>
+        <h1>ciao {{titolo}}</h1>
     </body>
 </html>
