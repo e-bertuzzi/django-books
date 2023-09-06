@@ -21,7 +21,7 @@
                 
                 {% for reading in readings %}
                     <tr>
-                        <th><a href="{% url 'book' titolo=reading.book %}">{{reading.book}}</a></th>
+                        <th><a href="{% url 'book' pk=reading.pk %}">{{reading.book}}</a></th>
                         <th>{{reading.data_inizio}}</th>
                         <th>{{reading.data_fine}}</th>
                     </tr>
