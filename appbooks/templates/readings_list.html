@@ -13,6 +13,19 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>Libri di Emanuele</h1>
+        <table>
+            <tr>
+                <th>Titolo</th>
+                <th>Data inizio</th>
+                <th>Data fine</th>
+                
+                {% for reading in readings %}
+                    <tr>
+                        <th>{{reading.book}}</th>
+                        <th>{{reading.data_inizio}}</th>
+                        <th>{{reading.data_fine}}</th>
+                    </tr>
+                {% endfor %}
+        </table>
     </body>
 </html>
