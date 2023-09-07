@@ -1,10 +1,11 @@
 from django.db import models
+from django_countries.fields import CountryField
 
 # Create your models here.
 class Author(models.Model):
     nome = models.CharField(max_length=100)
     cognome = models.CharField(max_length=100)
-    nazionalita = models.CharField(max_length=100)
+    nazionalita = CountryField()
 
     def __str__(self) -> str:
         return self.nome + " " + self.cognome
