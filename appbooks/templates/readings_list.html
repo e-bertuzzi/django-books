@@ -34,7 +34,7 @@
                             <tr>
                                 <td scope="row"><a href="{% url 'book' pk=reading.pk %}">{{reading.book}}</a>
                                     {% if days_until_start <= 604800 %}
-                                        <span class="badge text-bg-success animate__animated animate__flash animate__repeat-3">New</span>
+                                        <span class="badge text-bg-success animate__animated animate__flash animate__repeat-2">New</span>
                                     {% endif %}
                                 </td>
                                 <td scope="row" id="dataInizio">{{reading.data_inizio}}</td>
