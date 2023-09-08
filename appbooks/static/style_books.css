@@ -1,0 +1,14 @@
+.breadcrumb{
+    background-color: rgb(255, 255, 255);
+}
+
+.carousel-control-next {
+    filter: invert(100%);
+    position: absolute;
+    transform: translateX(-90%); 
+}
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+    position: absolute;
+    transform: translateX(90%); 
+}

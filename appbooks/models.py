@@ -10,10 +10,20 @@ class Author(models.Model):
     def __str__(self) -> str:
         return self.nome + " " + self.cognome
 
+class Quote(models.Model):
+    frase = models.TextField()
+    autore_frase = models.CharField(max_length=100)
+    pagina = models.IntegerField()
+
+    def __str__(self) -> str:
+        new_string = self.autore_frase.replace(" ","_")
+        return new_string + self.pagina.__str__()
+
 class Book(models.Model):
     titolo = models.CharField(max_length=100)
     genere = models.CharField(max_length=100)
     autore = models.ManyToManyField(Author)
+    quotes = models.ManyToManyField(Quote)
     pagine = models.IntegerField()
 
     def __str__(self) -> str:
