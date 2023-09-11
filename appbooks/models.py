@@ -23,7 +23,7 @@ class Book(models.Model):
     titolo = models.CharField(max_length=100)
     genere = models.CharField(max_length=100)
     autore = models.ManyToManyField(Author)
-    quotes = models.ManyToManyField(Quote)
+    quotes = models.ManyToManyField(Quote, blank=True)
     pagine = models.IntegerField()
 
     def __str__(self) -> str:
