@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'appbooks',
     'mathfilters',
-    'django_countries' 
+    'django_countries',
+    'members'
 ]
 
 MIDDLEWARE = [
